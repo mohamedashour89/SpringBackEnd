@@ -1,0 +1,11 @@
+POST http://localhost:8080/api/todos
+Content-Type: application/json
+
+{
+    "title": "Learn Spring Boot",
+    "description": "Complete Spring Boot REST API Tutorial",
+    "assigner": "Mohamed",
+    "assignee": "Ahmed",
+    "targetDate": "2025-03-01",
+    "status": "IN_PROGRESS"
+}

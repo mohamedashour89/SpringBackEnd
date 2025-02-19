@@ -1,0 +1,50 @@
+# Other projects to ignore
+/Users/Downloads/spring-basic/
+/Users/Downloads/JavaPracticeProject/
+/Users/Downloads/PlatformDemo/
+/Users/Downloads/JavaPracticeProject/
+
+
+# IDEs and Editors
+.vscode/
+.idea/
+*.iws
+*.iml
+*.ipr
+.project
+.classpath
+.settings/
+.tm_properties
+*.tmproj
+*.tmproject
+tmtags
+
+# Build directories
+build/
+dist/
+out/
+target/
+
+# Dependencies
+node_modules/
+.gradle/
+
+# Mac system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+
+# PostgreSQL related
+postgres-data/
+**/Postgres.app/
+/Users/Downloads/Postgres.app/
+postgresql@14/
+postgresql/
+
+# Apps to ignore
+**/TextMate.app/
+**/GitHub Desktop.app/
+/Users/Downloads/TextMate.app/
+/Users/Downloads/GitHub Desktop.app/

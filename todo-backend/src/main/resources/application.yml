@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: spring-starter
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springbasicdb
+    username: springuser
+    password: springpass
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
