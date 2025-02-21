@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Todo } from '../types/todo';
 import { api } from '../services/api';
+import './TodoList.css';  // Add this import
+
 
 const TodoList: React.FC = () => {
     // State for todos list and form data

@@ -10,6 +10,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/todos")
 
+// locahost8080/api/todos/{id} delete
 public class TodoController {
 
     private final TodoService todoService;
@@ -23,10 +24,15 @@ public class TodoController {
         return todoService.createTodo(todo);
     }
 
-
     @GetMapping
     public List<Todo> getAllTodo(){
         return todoService.getAllTodo();
     }
     
 }
+
+
+// login 
+// signup
+// lougout
+// user authentication

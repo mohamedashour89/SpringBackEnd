@@ -23,7 +23,4 @@ public class Todo {
         private String assignee;
         private LocalDate targetDate;
         private String status;
-
-    
-    
 }
