@@ -1081,3 +1081,100 @@ java.lang.IllegalStateException: Ambiguous handler methods mapped for '/api/todo
 2025-03-05T17:27:17.321+09:00 DEBUG 26549 --- [spring-starter] [http-nio-8080-exec-4] org.hibernate.SQL                        : select t1_0.id,t1_0.assignee,t1_0.assigner,t1_0.description,t1_0.status,t1_0.target_date,t1_0.title from todo t1_0
 2025-03-05T17:28:48.630+09:00  WARN 26549 --- [spring-starter] [http-nio-8080-exec-5] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot deserialize value of type `java.time.LocalDate` from String "hello": Failed to deserialize java.time.LocalDate: (java.time.format.DateTimeParseException) Text 'hello' could not be parsed at index 0]
 2025-03-05T17:29:00.983+09:00 DEBUG 26549 --- [spring-starter] [http-nio-8080-exec-6] org.hibernate.SQL                        : select t1_0.id,t1_0.assignee,t1_0.assigner,t1_0.description,t1_0.status,t1_0.target_date,t1_0.title from todo t1_0 where t1_0.id=?
+2025-03-05T17:57:09.753+09:00  INFO 26549 --- [spring-starter] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-05T17:57:09.760+09:00  INFO 26549 --- [spring-starter] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-05T17:57:09.766+09:00  INFO 26549 --- [spring-starter] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-05T17:57:09.771+09:00  INFO 26549 --- [spring-starter] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-05T17:57:09.774+09:00  INFO 26549 --- [spring-starter] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-05T17:57:15.409+09:00  INFO 40311 --- [spring-starter] [main] c.a.basic.SpringStarterApplication       : Starting SpringStarterApplication using Java 17.0.4.1 with PID 40311 (/Users/mohamedabdelrehim/Downloads/ToDoApplication/todo-backend/build/classes/java/main started by mohamedabdelrehim in /Users/mohamedabdelrehim/Downloads/ToDoApplication/todo-backend)
+2025-03-05T17:57:15.410+09:00 DEBUG 40311 --- [spring-starter] [main] c.a.basic.SpringStarterApplication       : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-05T17:57:15.411+09:00  INFO 40311 --- [spring-starter] [main] c.a.basic.SpringStarterApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-05T17:57:15.776+09:00  INFO 40311 --- [spring-starter] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-05T17:57:15.808+09:00  INFO 40311 --- [spring-starter] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 27 ms. Found 2 JPA repository interfaces.
+2025-03-05T17:57:16.081+09:00  INFO 40311 --- [spring-starter] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-05T17:57:16.090+09:00  INFO 40311 --- [spring-starter] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-05T17:57:16.090+09:00  INFO 40311 --- [spring-starter] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-05T17:57:16.121+09:00  INFO 40311 --- [spring-starter] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-05T17:57:16.121+09:00  INFO 40311 --- [spring-starter] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 687 ms
+2025-03-05T17:57:16.211+09:00  INFO 40311 --- [spring-starter] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-05T17:57:16.240+09:00  INFO 40311 --- [spring-starter] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-03-05T17:57:16.257+09:00  INFO 40311 --- [spring-starter] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-05T17:57:16.406+09:00  INFO 40311 --- [spring-starter] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-05T17:57:16.422+09:00  INFO 40311 --- [spring-starter] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-05T17:57:16.487+09:00  INFO 40311 --- [spring-starter] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5a899811
+2025-03-05T17:57:16.488+09:00  INFO 40311 --- [spring-starter] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-05T17:57:16.508+09:00  WARN 40311 --- [spring-starter] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-05T17:57:16.520+09:00  INFO 40311 --- [spring-starter] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.11
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-05T17:57:16.963+09:00  INFO 40311 --- [spring-starter] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-05T17:57:16.997+09:00  INFO 40311 --- [spring-starter] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-05T17:57:17.134+09:00  INFO 40311 --- [spring-starter] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-05T17:57:17.470+09:00  WARN 40311 --- [spring-starter] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-05T17:57:17.501+09:00  INFO 40311 --- [spring-starter] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-05T17:57:17.713+09:00  INFO 40311 --- [spring-starter] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-05T17:57:17.722+09:00  INFO 40311 --- [spring-starter] [main] c.a.basic.SpringStarterApplication       : Started SpringStarterApplication in 2.594 seconds (process running for 2.83)
+2025-03-05T17:57:27.426+09:00  INFO 40311 --- [spring-starter] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-05T17:57:27.426+09:00  INFO 40311 --- [spring-starter] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-05T17:57:27.428+09:00  INFO 40311 --- [spring-starter] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-03-05T17:57:27.491+09:00 DEBUG 40311 --- [spring-starter] [http-nio-8080-exec-1] org.hibernate.SQL                        : select t1_0.id,t1_0.assignee,t1_0.assigner,t1_0.description,t1_0.status,t1_0.target_date,t1_0.title from todo t1_0
+2025-03-05T17:57:42.608+09:00 DEBUG 40311 --- [spring-starter] [http-nio-8080-exec-2] org.hibernate.SQL                        : select t1_0.id,t1_0.assignee,t1_0.assigner,t1_0.description,t1_0.status,t1_0.target_date,t1_0.title from todo t1_0 where t1_0.id=?
+2025-03-05T17:57:42.624+09:00 DEBUG 40311 --- [spring-starter] [http-nio-8080-exec-2] org.hibernate.SQL                        : update todo set assignee=?,assigner=?,description=?,status=?,target_date=?,title=? where id=?
+2025-03-05T17:57:49.320+09:00 DEBUG 40311 --- [spring-starter] [http-nio-8080-exec-3] org.hibernate.SQL                        : select count(*) from todo t1_0 where t1_0.id=?
+2025-03-05T17:57:49.322+09:00 DEBUG 40311 --- [spring-starter] [http-nio-8080-exec-3] org.hibernate.SQL                        : select t1_0.id,t1_0.assignee,t1_0.assigner,t1_0.description,t1_0.status,t1_0.target_date,t1_0.title from todo t1_0 where t1_0.id=?
+2025-03-05T17:57:49.325+09:00 DEBUG 40311 --- [spring-starter] [http-nio-8080-exec-3] org.hibernate.SQL                        : delete from todo where id=?
+2025-03-05T17:58:37.237+09:00 DEBUG 40311 --- [spring-starter] [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into todo (assignee,assigner,description,status,target_date,title) values (?,?,?,?,?,?)
+2025-03-05T18:04:06.351+09:00  INFO 40311 --- [spring-starter] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-03-05T18:04:06.357+09:00  INFO 40311 --- [spring-starter] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-03-05T18:04:06.361+09:00  INFO 40311 --- [spring-starter] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-03-05T18:04:06.365+09:00  INFO 40311 --- [spring-starter] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-03-05T18:04:06.367+09:00  INFO 40311 --- [spring-starter] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-03-05T18:04:12.752+09:00  INFO 43146 --- [spring-starter] [main] c.a.basic.SpringStarterApplication       : Starting SpringStarterApplication using Java 17.0.4.1 with PID 43146 (/Users/mohamedabdelrehim/Downloads/ToDoApplication/todo-backend/build/classes/java/main started by mohamedabdelrehim in /Users/mohamedabdelrehim/Downloads/ToDoApplication/todo-backend)
+2025-03-05T18:04:12.753+09:00 DEBUG 43146 --- [spring-starter] [main] c.a.basic.SpringStarterApplication       : Running with Spring Boot v3.4.2, Spring v6.2.2
+2025-03-05T18:04:12.754+09:00  INFO 43146 --- [spring-starter] [main] c.a.basic.SpringStarterApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-03-05T18:04:13.269+09:00  INFO 43146 --- [spring-starter] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-05T18:04:13.306+09:00  INFO 43146 --- [spring-starter] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 2 JPA repository interfaces.
+2025-03-05T18:04:13.678+09:00  INFO 43146 --- [spring-starter] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-03-05T18:04:13.689+09:00  INFO 43146 --- [spring-starter] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-03-05T18:04:13.689+09:00  INFO 43146 --- [spring-starter] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-03-05T18:04:13.733+09:00  INFO 43146 --- [spring-starter] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-03-05T18:04:13.733+09:00  INFO 43146 --- [spring-starter] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 952 ms
+2025-03-05T18:04:13.853+09:00  INFO 43146 --- [spring-starter] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-05T18:04:13.888+09:00  INFO 43146 --- [spring-starter] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.5.Final
+2025-03-05T18:04:13.909+09:00  INFO 43146 --- [spring-starter] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-05T18:04:14.091+09:00  INFO 43146 --- [spring-starter] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-05T18:04:14.110+09:00  INFO 43146 --- [spring-starter] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-05T18:04:14.188+09:00  INFO 43146 --- [spring-starter] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6a51ae7c
+2025-03-05T18:04:14.189+09:00  INFO 43146 --- [spring-starter] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-05T18:04:14.212+09:00  WARN 43146 --- [spring-starter] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-03-05T18:04:14.225+09:00  INFO 43146 --- [spring-starter] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.11
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-03-05T18:04:14.689+09:00  INFO 43146 --- [spring-starter] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-05T18:04:14.731+09:00  INFO 43146 --- [spring-starter] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-05T18:04:14.867+09:00  INFO 43146 --- [spring-starter] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-03-05T18:04:15.195+09:00  WARN 43146 --- [spring-starter] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-05T18:04:15.225+09:00  INFO 43146 --- [spring-starter] [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-03-05T18:04:15.436+09:00  INFO 43146 --- [spring-starter] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-03-05T18:04:15.445+09:00  INFO 43146 --- [spring-starter] [main] c.a.basic.SpringStarterApplication       : Started SpringStarterApplication in 3.017 seconds (process running for 3.291)
+2025-03-05T18:04:33.672+09:00  INFO 43146 --- [spring-starter] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-03-05T18:04:33.672+09:00  INFO 43146 --- [spring-starter] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-03-05T18:04:33.673+09:00  INFO 43146 --- [spring-starter] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-03-05T18:04:33.751+09:00 DEBUG 43146 --- [spring-starter] [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into todo (assignee,assigner,description,status,target_date,title) values (?,?,?,?,?,?)
+2025-03-05T18:04:40.540+09:00 DEBUG 43146 --- [spring-starter] [http-nio-8080-exec-2] org.hibernate.SQL                        : select t1_0.id,t1_0.assignee,t1_0.assigner,t1_0.description,t1_0.status,t1_0.target_date,t1_0.title from todo t1_0 where t1_0.id=?
+2025-03-05T18:04:44.694+09:00 DEBUG 43146 --- [spring-starter] [http-nio-8080-exec-3] org.hibernate.SQL                        : select t1_0.id,t1_0.assignee,t1_0.assigner,t1_0.description,t1_0.status,t1_0.target_date,t1_0.title from todo t1_0 where t1_0.id=?
+2025-03-05T18:04:44.703+09:00 DEBUG 43146 --- [spring-starter] [http-nio-8080-exec-3] org.hibernate.SQL                        : update todo set assignee=?,assigner=?,description=?,status=?,target_date=?,title=? where id=?
+2025-03-05T18:04:47.801+09:00 DEBUG 43146 --- [spring-starter] [http-nio-8080-exec-4] org.hibernate.SQL                        : select t1_0.id,t1_0.assignee,t1_0.assigner,t1_0.description,t1_0.status,t1_0.target_date,t1_0.title from todo t1_0
+2025-03-05T18:04:59.798+09:00 DEBUG 43146 --- [spring-starter] [http-nio-8080-exec-5] org.hibernate.SQL                        : select count(*) from todo t1_0 where t1_0.id=?
+2025-03-05T18:04:59.801+09:00 DEBUG 43146 --- [spring-starter] [http-nio-8080-exec-5] org.hibernate.SQL                        : select t1_0.id,t1_0.assignee,t1_0.assigner,t1_0.description,t1_0.status,t1_0.target_date,t1_0.title from todo t1_0 where t1_0.id=?
+2025-03-05T18:04:59.803+09:00 DEBUG 43146 --- [spring-starter] [http-nio-8080-exec-5] org.hibernate.SQL                        : delete from todo where id=?
