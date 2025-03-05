@@ -21,7 +21,7 @@ public class TodoService {
     }
 
     public List<TodoDTO> getAllTodo(){
-        List<Todo> todos = todoRepository.findAll();
+        List<Todo> todos = todoRepository.getAllTodos();
         return todoMapper.toDTOList(todos);
     }
 

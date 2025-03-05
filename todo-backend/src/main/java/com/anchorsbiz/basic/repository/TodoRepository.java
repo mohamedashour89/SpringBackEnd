@@ -12,12 +12,14 @@ import com.anchorsbiz.basic.entity.Todo;
 
 public interface TodoRepository extends JpaRepository <Todo, Long> {
     
-    // Find todos due within next N days using @Query
-    @Query("SELECT t FROM Todo t WHERE t.targetDate BETWEEN :startDate AND :endDate")
-    List<Todo> findTodosDueInRange(
-        @Param("startDate") LocalDate startDate, 
-        @Param("endDate") LocalDate endDate
-    );
+
+    @Query("SELECT t FROM Todo t WHERE t.status = 'PENDING'")
+    List<Todo> getAllTodos();
+
+
+
+
+
 }
 
 // create, delete, update, find by id 직접 여기서 구현 
