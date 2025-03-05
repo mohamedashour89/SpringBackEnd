@@ -1,16 +1,14 @@
 package com.anchorsbiz.basic.controller;
 
-
+import com.anchorsbiz.basic.dto.TodoDTO;
 import org.springframework.web.bind.annotation.*;
 import com.anchorsbiz.basic.service.TodoService;
-import com.anchorsbiz.basic.entity.Todo;
 import java.util.List;
+import org.springframework.http.ResponseEntity;
 
-@CrossOrigin(origins = "http://localhost:3001")
+
 @RestController
 @RequestMapping("/api/todos")
-
-// locahost8080/api/todos/{id} delete
 public class TodoController {
 
     private final TodoService todoService;
@@ -18,16 +16,36 @@ public class TodoController {
     public TodoController(TodoService todoService){
         this.todoService = todoService;
     }
-
-    @PostMapping
-    public Todo createTodo (@RequestBody Todo todo){
-        return todoService.createTodo(todo);
-    }
-
-    @GetMapping
-    public List<Todo> getAllTodo(){
+    
+    @GetMapping("/search")
+    public List<TodoDTO> getAllTodo() {
         return todoService.getAllTodo();
+
     }
+
+    @PostMapping("/{create}")
+    public TodoDTO createTodo (@RequestBody TodoDTO todoDTO){
+        return todoService.createTodo(todoDTO);
+    }
+
+
+    @PutMapping("/{id}")
+    public ResponseEntity<TodoDTO> updateTodo(@PathVariable Long id, @RequestBody TodoDTO todoDTO) {
+        TodoDTO updatedTodo = todoService.updateTodo(id, todoDTO);
+        return ResponseEntity.ok(updatedTodo);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteTodo(@PathVariable Long id) {
+        todoService.deleteTodo(id);
+        return ResponseEntity.noContent().build();
+    }
+
+
+    
+
+    
+
     
 }
 

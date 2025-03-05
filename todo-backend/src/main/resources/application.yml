@@ -15,3 +15,11 @@ spring:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+    
+logging:
+  file:
+    name: logs/spring-boot.log
+  level:
+    root: INFO
+    com.anchorsbiz.basic: DEBUG
+    org.hibernate.SQL: DEBUG
