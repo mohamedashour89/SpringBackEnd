@@ -23,3 +23,8 @@ logging:
     root: INFO
     com.anchorsbiz.basic: DEBUG
     org.hibernate.SQL: DEBUG
+
+# JWT configuration access token
+jwt:
+  secret: c1d0c5838cc2a302db343cd514bf2934df906c289fd5b190f838ab14f8674bdf
+  expiration: 86400000  # 24 hours in milliseconds

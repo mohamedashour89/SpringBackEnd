@@ -48,3 +48,9 @@ postgresql/
 **/GitHub Desktop.app/
 /Users/Downloads/TextMate.app/
 /Users/Downloads/GitHub Desktop.app/
+
+# Ignore all .log files
+*.log
+logs/
+log
+spring-boot.log

@@ -27,7 +27,8 @@ public class TodoService {
 
     public TodoDTO createTodo(TodoDTO todoDTO){
         Todo todo = todoMapper.toEntity(todoDTO);
-        Todo savedTodo = todoRepository.save(todo);
+        todoRepository.insertTodo(todo);
+        Todo savedTodo = todoRepository.getLastInsertedTodo();
         return todoMapper.toDTO(savedTodo);
     }
 
@@ -51,39 +52,12 @@ public class TodoService {
 
 
 
-
-
-
-
     public void deleteTodo(Long id){
         if (!todoRepository.existsById(id)) {
-            throw new ResourceNotFoundException("Todo not found with thid id: " + id);
+            throw new ResourceNotFoundException("Todo not found with thiㄴ id: " + id);
         }
-        todoRepository.deleteById(id);
+        todoRepository.deleteTodoById(id);
     }
-
- 
-    // public TodoDTO createTodo(TodoDTO todoDTO) {
-    //     if (todoDTO == null) {
-    //         throw new IllegalArgumentException("TodoDTO cannot be null");
-    //     }
-    
-    //     try {
-    //         Todo todo = todoMapper.toEntity(todoDTO);
-    //         Todo savedTodo = todoRepository.save(todo);  // Fixed typo in variable name
-    //         return todoMapper.toDTO(savedTodo);
-    //     } catch (Exception e) {
-    //         throw new RuntimeException("Failed to create todo", e);
-    //     }
-    // }
-
-
-
-
-
-
-
-
 
 
 
